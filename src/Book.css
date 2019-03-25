@@ -1,0 +1,28 @@
+.book{
+    display: grid;
+    grid-template-columns: 25% 30% 45%;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border: 1px solid #ededed;
+}
+
+.grid-item{
+    text-align: left;
+    padding: 15px;
+    height: 100%;
+}
+
+.first-grid-item{
+    text-align: center;
+}
+
+img{
+    height: auto;
+    width: auto;
+    border: 1px solid black;
+    margin:10px 0;
+}
+
+.red-text{
+    color: red;
+}
