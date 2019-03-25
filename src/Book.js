@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import "./Book.css";
 
 class Book extends Component {
 
@@ -18,12 +18,16 @@ if(this.props.book.authors !== undefined){
 
    
     return (
-        <li>
-            <h1> {this.props.book.title}</h1>
-            <h2>{this.props.book.authors !== undefined && author_str}</h2>
-            <h3>{this.props.book.price}</h3>
-            <p>{this.props.book.description}</p>
-            <img src ={this.props.book.thumbnail} alt = "book-img" />
+        <li className="book">
+        <div className="first-grid-item">
+        <img src ={this.props.book.thumbnail} alt = "book-img" />
+        </div>
+        <div className="grid-item">
+        <h1>"{this.props.book.title}"</h1>
+            <p>{this.props.book.authors !== undefined && author_str}</p>
+            <i className="red-text">{this.props.book.price}</i>
+        </div>
+        <div className="grid-item"><p>{this.props.book.description}</p></div>
         </li>
       
     );
