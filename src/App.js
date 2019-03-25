@@ -4,7 +4,6 @@ import BookList from './BookList'
 
 class App extends Component {
 
-
 constructor(props) {
     super(props)
     this.state = {
@@ -17,9 +16,6 @@ constructor(props) {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleFilterChange = this.handleFilterChange.bind(this); 
   }
-
-
-
 
   handleChange(event){
     this.setState({value:event.target.value});
@@ -54,12 +50,6 @@ constructor(props) {
       this.setState({
         books: books_arr
       })
-     // console.log(res.items[0].volumeInfo.printType)
-     // console.log(res.items[0].volumeInfo.title);
-     // console.log(res.items[0].volumeInfo.authors[0]);
-     // console.log(res.items[0].volumeInfo.description);
-     // console.log(res.items[0].saleInfo.saleability);
-    //console.log(res.items[0].saleInfo.saleability);
       }
     );
     
@@ -86,18 +76,18 @@ constructor(props) {
       <div>
 
       <form onSubmit={this.handleSubmit}>
-      <label htmlFor="Search Books">Search Books: </label>
+      <label htmlFor="Search Books">Search: </label>
         <input type="text" value= {this.state.value} onChange={this.handleChange} />
-        <input type ="submit" value="Submit"/>
+        <input type ="submit" value="Search"/>
       </form>
 
-      <section>
-      <label htmlFor="price">Price Filter: </label>
+      <section className="filters">
+      <label htmlFor="price">Sale Type: </label>
       <select id = "price" onChange ={this.handleFilterChange}>
       <option>All</option>
       <option>For Sale Only</option>
       </select>
-
+      
       <label htmlFor="book-filter">Book Filter: </label>
       <select id = "book-filter" onChange ={this.handleFilterChange}>
       <option> All </option>
